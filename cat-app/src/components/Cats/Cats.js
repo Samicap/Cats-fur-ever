@@ -8,6 +8,9 @@ export default function Cats() {
     .then((response) => {
       console.log(response)
     })
+    .catch((error) => {
+      console.log("Error")
+    })
   return(
     <div>
       <h2>Cats</h2>
