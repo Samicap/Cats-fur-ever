@@ -4,7 +4,7 @@ import './App.css';
 import Login from '../Login/Login';
 // import Dashboard from '../Dashboard/Dashboard';
 import Preferences from '../Preferences/Preferences';
-import Cats from './Cats';
+import Cats from '../Cats/Cats';
 import useToken from './useToken';
 
 
