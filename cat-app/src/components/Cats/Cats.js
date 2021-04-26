@@ -10,11 +10,11 @@ export default function Cats() {
   // Without the e as a parameter in helloClick the api is called without a click. called twice.
   // response.data[0].url is the cat
   function helloClick() {
-    console.log("Hello")
     axios.get('https://api.thecatapi.com/v1/images/search', { params: { limit:1, size:10}})
       .then((response) => {
         const CatPictureURL = response.data[0].url;
         setCatPicture(CatPictureURL);
+        console.log("API Response: ", response.data[0])
         console.log(CatPictureURL)
       })
       .catch((error) => {
@@ -29,7 +29,6 @@ export default function Cats() {
       <h2>Cats</h2>
       <img src={catPicture} className="cat" alt="Cat"/>
       <button onClick={helloClick}>Cat Search</button>
-
     </div>
   );
 }

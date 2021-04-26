@@ -5,6 +5,7 @@ import Login from '../Login/Login';
 // import Dashboard from '../Dashboard/Dashboard';
 import Preferences from '../Preferences/Preferences';
 import Cats from '../Cats/Cats';
+import Form from '../Form/Form';
 import useToken from './useToken';
 
 
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/cats">
             <Cats />
+          </Route>
+          <Route path="/form">
+            <Form />
           </Route>
         </Switch>
       </BrowserRouter>
