@@ -11,4 +11,8 @@ app.use('/login', (req, res) => {
   });
 });
 
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
 app.listen(8080, () => console.log('API is running on http://localhost:8080/login')); 

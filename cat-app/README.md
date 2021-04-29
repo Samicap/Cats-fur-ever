@@ -1,3 +1,13 @@
+## Form.js made following this tutorial:
+https://www.digitalocean.com/community/tutorials/how-to-build-forms-in-react
+
+## CAT API 
+Documentation for Authentication: https://docs.thecatapi.com/authentication  
+
+##  Get user input values in React 16+ Tutorial
+https://flaviocopes.com/react-how-to-get-value-input/
+
+###############################################################
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
