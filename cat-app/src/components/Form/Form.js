@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React from 'react';
+import React, { useState } from 'react';
 import './Form.css';
 
 require('dotenv').config();
@@ -7,12 +7,13 @@ require('dotenv').config();
 export default function Form() {
 
   const [breed, setBreed] = useState('');
+  console.log(breed)
 
   const handleSubmit = event => {
     event.preventDefault();
     let apiKey = process.env.REACT_APP_TEST
     // breed needs to be the user Input
-    let breed = "";
+    // let breed = "";
     let apiURL = "https://api.thecatapi.com/v1/breeds/images/search?q={breed}";
     axios.post(apiURL, {
       headers: {
