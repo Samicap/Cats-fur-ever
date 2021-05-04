@@ -7,21 +7,23 @@ require('dotenv').config();
 export default function Form() {
 
   const [breed, setBreed] = useState('');
-  console.log(breed)
-
+  const [apiData, setApiData] = useState([]);
+  
   const handleSubmit = event => {
     event.preventDefault();
-    let apiKey = process.env.REACT_APP_TEST
+    let apiKey = process.env.REACT_APP_CAT_API_KEY
     // breed needs to be the user Input
-    // let breed = "";
-    let apiURL = "https://api.thecatapi.com/v1/breeds/images/search?q={breed}";
-    axios.post(apiURL, {
+    let apiURL = `https://api.thecatapi.com/v1/images/search?breed_ids=${breed}`;
+    axios.get(apiURL, {
       headers: {
         'Authorization': `key ${apiKey}`
       }
-
     })
-    alert("you have submitted the form")
+    .then((response) => {
+      setApiData(response);
+      // issue: this isn't being logged unless the submit button is hit twice
+      console.log("line 25", apiData)
+    })
   }
 
   return(

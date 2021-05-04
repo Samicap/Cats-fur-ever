@@ -9,6 +9,18 @@ Documentation for Authentication: https://docs.thecatapi.com/authentication
 ##  Get user input values in React 16+ Tutorial
 https://flaviocopes.com/react-how-to-get-value-input/
 
+## 404 vs 405 error code article
+https://airbrake.io/blog/http-errors/405-method-not-allowed
+
+## Restful API in React
+https://pusher.com/tutorials/consume-restful-api-react
+Uses the newer way of setting State.
+Use setState to hold the data from the Api response then map over it in react ejs
+
+## useState in React
+https://blog.logrocket.com/a-guide-to-usestate-in-react-ecb9952e406c/
+this uses the older React version of how to setState.
+
 ###############################################################
 # Getting Started with Create React App
 
