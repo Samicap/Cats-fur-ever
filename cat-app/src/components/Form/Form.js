@@ -7,21 +7,25 @@ require('dotenv').config();
 export default function Form() {
 
   const [breed, setBreed] = useState('');
-  const [apiData, setApiData] = useState([]);
+  // is useState automatically set to be an array?
+  // const [apiData, setApiData] = useState([]) did NOT work.  the apiData.map in the render was not a function.
+  const [apiData, setApiData] = useState();
   
   const handleSubmit = event => {
     event.preventDefault();
     let apiKey = process.env.REACT_APP_CAT_API_KEY
-    // breed needs to be the user Input
     let apiURL = `https://api.thecatapi.com/v1/images/search?breed_ids=${breed}`;
+    // Issue now: the cat API will only look up a breed with this code with the first 4 letters.
+
     axios.get(apiURL, {
       headers: {
         'Authorization': `key ${apiKey}`
       }
     })
     .then((response) => {
-      setApiData(response);
+      setApiData(response.data);
       // issue: this isn't being logged unless the submit button is hit twice
+      // the 1st time submit is clicked the response is "undefined"
       console.log("line 25", apiData)
     })
   }
@@ -38,6 +42,11 @@ export default function Form() {
         </fieldset>
         <button type="submit">Submit</button>
       </form>
+      <h1>Cat API Response</h1>
+      {apiData.map((cat) => (
+        <p key="cat">{cat.breeds[0].name}</p>
+        
+      ))}
     </div>
   )
 }
