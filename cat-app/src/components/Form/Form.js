@@ -16,6 +16,7 @@ export default function Form() {
     let apiKey = process.env.REACT_APP_CAT_API_KEY
     let apiURL = `https://api.thecatapi.com/v1/images/search?breed_ids=${breed}`;
     // Issue now: the cat API will only look up a breed with this code with the first 4 letters.
+    // Do i need to make the send with only the 1st four letters?  Or search by name in APi?
 
     axios.get(apiURL, {
       headers: {
