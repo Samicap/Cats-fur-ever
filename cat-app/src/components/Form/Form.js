@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Form.css';
 
 require('dotenv').config();
@@ -11,14 +11,18 @@ export default function Form() {
   // const [apiData, setApiData] = useState([]) did NOT work.  the apiData.map in the render was not a function.
   const [apiData, setApiData] = useState();
   
-  const handleSubmit = event => {
+
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     let apiKey = process.env.REACT_APP_CAT_API_KEY
-    let apiURL = `https://api.thecatapi.com/v1/images/search?breed_ids=${breed}`;
+    let apiURL = `https://api.thecatapi.com/v1/breeds/search?q=${breed}`;
     // Issue now: the cat API will only look up a breed with this code with the first 4 letters.
     // Do i need to make the send with only the 1st four letters?  Or search by name in APi?
 
-    axios.get(apiURL, {
+    // Should i add a spinner image to show while data is being fetched?
+  
+    await axios.get(apiURL, {
       headers: {
         'Authorization': `key ${apiKey}`
       }
@@ -29,7 +33,11 @@ export default function Form() {
       // the 1st time submit is clicked the response is "undefined"
       console.log("line 25", apiData)
     })
+    .catch((error) => {
+      console.log("Error, ", error)
+    })
   }
+
 
   return(
     <div className="wrapper">
@@ -44,10 +52,10 @@ export default function Form() {
         <button type="submit">Submit</button>
       </form>
       <h1>Cat API Response</h1>
-      {apiData.map((cat) => (
-        <p key="cat">{cat.breeds[0].name}</p>
+      {/* {apiData.map((cat) => (
+        <p key="cat">{cat[0]}</p>
         
-      ))}
+      ))} */}
     </div>
   )
 }
