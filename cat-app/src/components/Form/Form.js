@@ -9,11 +9,11 @@ export default function Form() {
   const [breed, setBreed] = useState('');
   // is useState automatically set to be an array?
   // const [apiData, setApiData] = useState([]) did NOT work.  the apiData.map in the render was not a function.
-  const [apiData, setApiData] = useState();
+  const [apiData, setApiData] = useState([]);
   
 
 
-  const handleSubmit = async (event) => {
+    const handleSubmit = event => {
     event.preventDefault();
     let apiKey = process.env.REACT_APP_CAT_API_KEY
     let apiURL = `https://api.thecatapi.com/v1/breeds/search?q=${breed}`;
@@ -22,20 +22,17 @@ export default function Form() {
 
     // Should i add a spinner image to show while data is being fetched?
   
-    await axios.get(apiURL, {
-      headers: {
-        'Authorization': `key ${apiKey}`
-      }
-    })
-    .then((response) => {
-      setApiData(response.data);
-      // issue: this isn't being logged unless the submit button is hit twice
-      // the 1st time submit is clicked the response is "undefined"
-      console.log("line 25", apiData)
-    })
-    .catch((error) => {
-      console.log("Error, ", error)
-    })
+      axios.get(apiURL, {
+        headers: {
+          'Authorization': `key ${apiKey}`
+        }
+      })
+      .then((response) => {
+        setApiData(response.data);
+      })
+      .catch((error) => {
+        console.log("Error, ", error)
+      })
   }
 
 
@@ -52,10 +49,12 @@ export default function Form() {
         <button type="submit">Submit</button>
       </form>
       <h1>Cat API Response</h1>
-      {/* {apiData.map((cat) => (
-        <p key="cat">{cat[0]}</p>
+
+       {apiData.map((cat) => {
+         return   <p key="cat">{JSON.stringify(cat)}</p>
+       }
         
-      ))} */}
+      )}
     </div>
   )
 }
