@@ -1,5 +1,10 @@
 ## Welcome to Cats_Fur_Ever!
 
+To run the login the server must be started.  Inside cats-app run "node server.js"
+
+As of May 18, 2021, the login component is a learning tool for using tokens in a web app.  It is not
+a true authorized login.  The Login/token credentials can be seen using Dev tools in Chrome under Application in Session Storage.
+
 ## Form.js made following this tutorial:
 https://www.digitalocean.com/community/tutorials/how-to-build-forms-in-react
 

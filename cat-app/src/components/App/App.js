@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';import Dashboard from '../Dashboard/Dashboard';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Dashboard from '../Dashboard/Dashboard';
 import './App.css';
 import Login from '../Login/Login';
 // import Dashboard from '../Dashboard/Dashboard';
@@ -21,9 +22,6 @@ function App() {
       <h1>Application</h1>
       <BrowserRouter>
         <Switch>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
           <Route path="/preferences">
             <Preferences />
           </Route>
@@ -32,6 +30,9 @@ function App() {
           </Route>
           <Route path="/form">
             <Form />
+          </Route>
+          <Route exact path="/">
+            <Dashboard />
           </Route>
         </Switch>
       </BrowserRouter>
