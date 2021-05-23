@@ -30,7 +30,14 @@ Use setState to hold the data from the Api response then map over it in react ej
 https://blog.logrocket.com/a-guide-to-usestate-in-react-ecb9952e406c/
 this uses the older React version of how to setState.
 
+## Articles that are flawed/didn't work quite right
+https://medium.com/swlh/responsive-navbar-using-react-bootstrap-5e0e0bd33bd6  
+-the end product of this article does not work.  Not sure if it is due to the author not providing 
+-the css pages necessary for the responsive design to kick in or due to the React JS not being
+-up to date with the current React programming. 
+
 ###############################################################
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

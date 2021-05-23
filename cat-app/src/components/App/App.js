@@ -19,9 +19,9 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Application</h1>
-        <Navigation>
-      <BrowserRouter>
+      <h1>Cats Fur Ever!!</h1>
+      <Navigation>
+        <BrowserRouter>
           <Switch>
             <Route path="/preferences">
               <Preferences />
@@ -36,8 +36,8 @@ function App() {
               <Dashboard />
             </Route>
           </Switch>
-      </BrowserRouter>
-        </Navigation>
+        </BrowserRouter>
+      </Navigation>
     </div>
   );
 }
