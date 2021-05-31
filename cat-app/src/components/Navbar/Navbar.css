@@ -1,0 +1,10 @@
+
+  .navbar {
+    width: 100%;
+    border-color: blueviolet;
+    color: pink;
+
+  }
+
+@media screen and (min-width: 1024px) {
+}

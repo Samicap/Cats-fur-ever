@@ -1,12 +1,13 @@
 import React from 'react';
 import { Nav, Navbar, Container } from 'react-bootstrap';
+import './Navbar.css';
 
 export default function Navigation() {
   return (
     <div>
-      <Navbar collapseOnSelect fixed='top' expand='sm' bg='dark' variant='dark'>
-        <Container>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+      <Navbar fixed='top' bg='dark' variant='dark' className="navbar">
+        {/* <Container>
+          <Navbar.Toggle  />
           <Navbar.Collapse id='responsive-navbar-nav'>
            <Nav>
             <Nav.Link href='/'>Home</Nav.Link>
@@ -14,7 +15,12 @@ export default function Navigation() {
             <Nav.Link href='/cats'>Cats</Nav.Link>
            </Nav>
           </Navbar.Collapse>
-        </Container>
+        </Container> */}
+        
+        <Nav>
+          <Nav.Link href="/form"> Form</Nav.Link>
+          <Nav.Link href="/"> Home</Nav.Link>
+        </Nav>
       </Navbar>
     </div>
   )

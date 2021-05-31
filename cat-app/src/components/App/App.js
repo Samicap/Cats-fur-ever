@@ -19,25 +19,23 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Cats Fur Ever!!</h1>
-      <Navigation>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/preferences">
-              <Preferences />
-            </Route>
-            <Route path="/cats">
-              <Cats />
-            </Route>
-            <Route path="/form">
-              <Form />
-            </Route>
-            <Route exact path="/">
-              <Dashboard />
-            </Route>
-          </Switch>
-        </BrowserRouter>
-      </Navigation>
+      <BrowserRouter>
+        <Navigation />
+        <Switch>
+          <Route path="/preferences">
+            <Preferences />
+          </Route>
+          <Route path="/cats">
+            <Cats />
+          </Route>
+          <Route path="/form">
+            <Form />
+          </Route>
+          <Route exact path="/">
+            <Dashboard />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
