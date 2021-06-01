@@ -1,7 +1,8 @@
 .wrapper {
-  padding: 5px 20px;
+  /* padding: 5px 20px; */
+  background-color: cyan;
 }
 
-.wrapper fieldset {
+/* .wrapper fieldset {
   margin: 20px 0;
-}
+} */

@@ -1,10 +1,18 @@
 
   .navbar {
     width: 100%;
-    border-color: blueviolet;
+    height: 10vh;
+    background-color: #8a2be2;
+    border: chartreuse;
+    border-width: 5px;
     color: pink;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
 
   }
+
 
 @media screen and (min-width: 1024px) {
 }
