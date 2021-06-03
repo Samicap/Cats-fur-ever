@@ -36,6 +36,10 @@ https://medium.com/swlh/responsive-navbar-using-react-bootstrap-5e0e0bd33bd6
 -the css pages necessary for the responsive design to kick in or due to the React JS not being
 -up to date with the current React programming. 
 
+## Import Downloaded font
+-This article is for React Native but the start is good for Reat for web i think.  I had to copy and paste the font file from the Font book into the App from the mac Applicaton folder.
+https://blog.bam.tech/developer-news/add-a-custom-font-to-your-react-native-app
+
 ###############################################################
 
 # Getting Started with Create React App

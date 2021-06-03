@@ -6,7 +6,7 @@ export default function Navigation() {
   return (
     <div>
       <Navbar fixed="top" bg="dark" variant="dark" className="navbar">
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" className="cat-logo">
           <img alt="cat logo" src="images/cat.png" />
           Cats-Fur-Ever!!!
         </Navbar.Brand>

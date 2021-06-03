@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Neoneon';
+  src: local('Neoneon'), url('../src/fonts/Neoneon-3zaD6.otf') format("opentype")
+}
