@@ -38,7 +38,10 @@ https://medium.com/swlh/responsive-navbar-using-react-bootstrap-5e0e0bd33bd6
 
 ## Import Downloaded font
 -This article is for React Native but the start is good for Reat for web i think.  I had to copy and paste the font file from the Font book into the App from the mac Applicaton folder.
+-After copy and pasting in index.css added font-family to be able to use the font in the navbar.css file.
 https://blog.bam.tech/developer-news/add-a-custom-font-to-your-react-native-app
+
+
 
 ###############################################################
 

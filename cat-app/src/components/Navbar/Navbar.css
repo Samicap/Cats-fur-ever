@@ -1,39 +1,49 @@
-
-  .navbar {
-    width: 100%;
-    height: 10vh;
-    /* background-color: #8a2be2; */
-    border: chartreuse;
-    border-width: 20px;
-    color: pink;
-    /* display: flex;
+.navbar {
+  width: 100%;
+  height: 10vh;
+  /* background-color: #8a2be2; */
+  border: chartreuse;
+  border-width: 20px;
+  color: pink;
+  /* display: flex;
     flex-direction: row; */
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* display: grid;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* display: grid;
     grid-template-columns: auto auto; */
+}
 
-  }
+.cat-logo {
+  /* justify-self: flex-start; */
+  /* background-color: yellow; */
+  font-family: "Neoneon";
+  font-size: 2em;
+  font-weight: bold;
+  color: pink;
+  text-decoration: none;
+}
 
-  .cat-logo {
-    /* justify-self: flex-start; */
-    background-color: yellow;
-    font-family: 'Neoneon';
-  }
-
-  .nav-links {
-    /* align-self: flex-end; */
-    /* justify-self: flex-end; */
-    /* justify-self: left; */
-    /* justify-self: end; */
-    /* border: yellow;
+.nav-links {
+  /* align-self: flex-end; */
+  /* justify-self: flex-end; */
+  /* justify-self: left; */
+  /* justify-self: end; */
+  /* border: yellow;
     border-width: 10px; */
-    background-color: pink;
-    /* grid-area:; */
-    float: right;
-  }
+  background-color: pink;
+  /* grid-area:; */
+  float: right;
+}
 
+.nav-form-link {
+  color: cyan;
+  text-decoration: none;
+}
+
+.nav-home-link {
+  text-decoration: none;
+}
 
 @media screen and (min-width: 1024px) {
 }

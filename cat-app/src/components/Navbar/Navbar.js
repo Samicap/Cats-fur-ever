@@ -22,8 +22,8 @@ export default function Navigation() {
         </Container> */}
 
         <Nav className="nav-links">
-          <Nav.Link href="/form"> Form</Nav.Link>
-          <Nav.Link href="/"> Home</Nav.Link>
+          <Nav.Link href="/form" className="nav-form-link"> Form</Nav.Link>
+          <Nav.Link href="/" className="nav-home-link"> Home</Nav.Link>
         </Nav>
       </Navbar>
     </div>
