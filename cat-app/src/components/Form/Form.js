@@ -35,7 +35,7 @@ export default function Form() {
 
   return (
     <div className="wrapper">
-      <h1>Find a Cat Breed</h1>
+      <h1 className="cat-form-title">Find a Cat Breed</h1>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <label>
@@ -48,7 +48,7 @@ export default function Form() {
         </fieldset>
         <button type="submit">Submit</button>
       </form>
-      <h1>Cat API Response</h1>
+      <h1 className="api-response-header">Cat API Response</h1>
 
       {apiData.map((cat) => {
         return (

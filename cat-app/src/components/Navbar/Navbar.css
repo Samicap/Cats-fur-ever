@@ -1,9 +1,7 @@
 .navbar {
   width: 100%;
   height: 10vh;
-  /* background-color: #8a2be2; */
-  border: chartreuse;
-  border-width: 20px;
+  background-color: #8a2be2;
   color: pink;
   /* display: flex;
     flex-direction: row; */
@@ -15,12 +13,15 @@
 }
 
 .cat-logo {
+  box-shadow: 40px 20px #0ff;
+
   /* justify-self: flex-start; */
   /* background-color: yellow; */
   font-family: "Neoneon";
   font-size: 2em;
   font-weight: bold;
   color: pink;
+  text-shadow: 2px 2px 4px #e21e80;
   text-decoration: none;
 }
 
@@ -28,7 +29,7 @@
   /* align-self: flex-end; */
   /* justify-self: flex-end; */
   /* justify-self: left; */
-  /* justify-self: end; */
+  /* justify-self: center; */
   /* border: yellow;
     border-width: 10px; */
   background-color: pink;
