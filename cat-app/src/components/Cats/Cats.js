@@ -25,10 +25,10 @@ export default function Cats() {
   // need to create a function to call in the onClick
 
   return(
-    <div>
-      <h2>Cats</h2>
-      <img src={catPicture} className="cat" alt="Cat"/>
-      <button onClick={helloClick}>Cat Search</button>
+    <div className="random-cat-setup">
+      <h2 className="cat-picture-title">Hit the button to see another random cat picture!</h2>
+      <button onClick={helloClick} className="random-cat-search-button">Cat Search</button>
+      <img src={catPicture} className="cat-picture" alt="Cat"/>
     </div>
   );
 }

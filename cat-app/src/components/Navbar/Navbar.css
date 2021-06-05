@@ -4,17 +4,15 @@
   background-color: #8a2be2;
   color: pink;
   /* display: flex;
-    flex-direction: row; */
+  flex-direction: row; */
   /* justify-content: space-around; */
   /* align-items: center; */
   /* justify-content: center; */
   /* display: grid;
-    grid-template-columns: auto auto; */
+  grid-template-columns: auto auto; */
 }
 
 .cat-logo {
-  box-shadow: 40px 20px #0ff;
-
   /* justify-self: flex-start; */
   /* background-color: yellow; */
   font-family: "Neoneon";
@@ -31,18 +29,23 @@
   /* justify-self: left; */
   /* justify-self: center; */
   /* border: yellow;
-    border-width: 10px; */
-  background-color: pink;
+  border-width: 10px; */
   /* grid-area:; */
   float: right;
 }
 
 .nav-form-link {
-  color: cyan;
+  color: pink;
   text-decoration: none;
 }
 
 .nav-home-link {
+  color: pink;
+  text-decoration: none;
+}
+
+.nav-random-cat-link {
+  color: pink;
   text-decoration: none;
 }
 

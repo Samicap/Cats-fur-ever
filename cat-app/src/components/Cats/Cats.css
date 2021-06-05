@@ -1,4 +1,24 @@
-.cat {
-  height: 500px;
-  width: 500px;
+.random-cat-setup {
+  display: grid;
+  grid-template-rows: 10vh 5vh 100vh;
+  grid-template-columns: 5vw auto 5vw;
+  row-gap: 2vh;
+}
+
+.cat-picture-title {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.random-cat-search-button {
+  width: 10vw;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.cat-picture {
+  height: auto;
+  width: 100%;
+  grid-column: 2;
+  grid-row: 3;
 }
