@@ -10,10 +10,17 @@
   grid-column: 2;
 }
 
-.random-cat-search-button {
-  width: 10vw;
+.button-container {
   grid-row: 2;
   grid-column: 2;
+}
+
+.random-cat-search-button {
+  width: 10vw;
+}
+
+.favorite-button {
+  width: 10vw;
 }
 
 .cat-picture {
