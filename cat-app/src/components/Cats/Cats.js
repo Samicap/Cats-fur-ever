@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import "./Cats.css";
 
+
+console.log(process.env)
+
 const axios = require("axios");
-require("dotenv").config();
 
 export default function Cats() {
   // setSate for the api response
   const [catPicture, setCatPicture] = useState();
   const [catPictureId, setCatPictureId] = useState();
-  let apiKey = process.env.REACT_APP_CAT_API_KEY;
-  let appleKey=process.env.REACT_APP_APPLE;
-  console.log(appleKey)
 
   // Without the e as a parameter in helloClick the api is called without a click. called twice.
   // response.data[0].url is the cat
@@ -26,17 +25,53 @@ export default function Cats() {
         console.log("API Response: ", response.data[0]);
       })
       .catch((error) => {
-        console.log("Error");
+        console.log("Error", error);
       });
   }
 
   function favoriteClick() {
+    let postBody = {
+      image_id: catPictureId,
+      sub_id: "User-123"
+    }
+
+    let headers = {
+        "x-api-key": process.env.REACT_APP_CAT_API_KEY,
+        "content-type": "application/json"
+    }
+
     axios
-      .post("https://api.thecatapi.com/v1/favourites", {image_id: catPictureId, sub_id: "User-123"}, {
-        headers: {"x-api-key": `key ${apiKey}`}
+      .post("https://api.thecatapi.com/v1/favourites", postBody, {headers: headers,}
+      )
+      .then((response) => {
+        console.log("response from favorite post request", response)
       })
-      console.log("apple", catPictureId)
-      console.log(apiKey)
+      .catch((error) => {
+        console.log("Error while posting to favorites: ", error)
+      })
+      console.log("Cat Picture Id: ", catPictureId)
+  }
+
+  function fetchUserFavoritePictures() {
+
+    let query = {
+      sub_id: "User-123",
+      limit: 10
+    }
+
+    let headers = {
+      "x-api-key": process.env.REACT_APP_CAT_API_KEY,
+      "content-type": "application/json"
+  }
+
+    axios
+      .get("https://api.thecatapi.com/v1/favourites", query, {headers: headers})
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log("Error fetching user's favorite cat pictures: ", error)
+      })
   }
 
   // need to create a function to call in the onClick

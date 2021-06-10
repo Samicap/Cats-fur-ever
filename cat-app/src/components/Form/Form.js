@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./Form.css";
 
-require("dotenv").config();
 
 export default function Form() {
   const [breed, setBreed] = useState("");
@@ -22,7 +21,7 @@ export default function Form() {
     axios
       .get(apiURL, {
         headers: {
-          Authorization: `key ${apiKey}`,
+          // Authorization: `key ${apiKey}`,
         },
       })
       .then((response) => {
