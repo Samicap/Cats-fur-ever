@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Cats.css";
 
-
-console.log(process.env)
+console.log(process.env);
 
 const axios = require("axios");
 
@@ -21,7 +20,7 @@ export default function Cats() {
       .then((response) => {
         const CatPictureURL = response.data[0].url;
         setCatPicture(CatPictureURL);
-        setCatPictureId(response.data[0].id)
+        setCatPictureId(response.data[0].id);
         console.log("API Response: ", response.data[0]);
       })
       .catch((error) => {
@@ -32,29 +31,26 @@ export default function Cats() {
   function favoriteClick() {
     let postBody = {
       image_id: catPictureId,
-      sub_id: "User-123"
-    }
+      sub_id: "User-123",
+    };
 
     let headers = {
-        "x-api-key": process.env.REACT_APP_CAT_API_KEY,
-        "content-type": "application/json"
-    }
+      "x-api-key": process.env.REACT_APP_CAT_API_KEY,
+      "content-type": "application/json",
+    };
 
     axios
-      .post("https://api.thecatapi.com/v1/favourites", postBody, {headers: headers,}
-      )
+      .post("https://api.thecatapi.com/v1/favourites", postBody, {
+        headers: headers,
+      })
       .then((response) => {
-        console.log("response from favorite post request", response)
+        console.log("response from favorite post request", response);
       })
       .catch((error) => {
-        console.log("Error while posting to favorites: ", error)
-      })
-      console.log("Cat Picture Id: ", catPictureId)
+        console.log("Error while posting to favorites: ", error);
+      });
+    console.log("Cat Picture Id: ", catPictureId);
   }
-
-
-
-  // need to create a function to call in the onClick
 
   return (
     <div className="random-cat-setup">
@@ -65,7 +61,9 @@ export default function Cats() {
         <button onClick={helloClick} className="random-cat-search-button">
           Cat Search
         </button>
-        <button onClick={favoriteClick} className="favorite-button">Favorite</button>
+        <button onClick={favoriteClick} className="favorite-button">
+          Favorite
+        </button>
       </span>
       <img src={catPicture} className="cat-picture" alt="Cat" />
     </div>
