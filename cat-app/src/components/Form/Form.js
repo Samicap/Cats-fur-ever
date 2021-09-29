@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Form.css";
+import CatBreedImage from "../CatBreedImage/CatBreedImage";
 
 
 export default function Form() {
@@ -11,7 +12,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    let apiKey = process.env.REACT_APP_CAT_API_KEY;
+    //  let apiKey = process.env.REACT_APP_CAT_API_KEY;
     let apiURL = `https://api.thecatapi.com/v1/breeds/search?q=${breed}`;
     // Issue now: the cat API will only look up a breed with this code with the first 4 letters.
     // Do i need to make the send with only the 1st four letters?  Or search by name in APi?
@@ -52,10 +53,15 @@ export default function Form() {
       {apiData.map((cat) => {
         return (
           <ul key="cat">
+          <CatBreedImage cat_id={cat.id} />
             <li>Name: {cat.name}</li>
+            <li>Origin: {cat.origin} </li>
             <li>Weight: {cat.weight.metric} kgs</li>
+            <li>Life Span: {cat.life_span} </li>
+            <li>Temperament: {cat.temperament} </li>
+            <li>Description: {cat.description} </li>
           </ul>
-        // <p key="cat">{JSON.stringify(cat)}</p>
+         // <p key="cat">{JSON.stringify(cat)}</p>
         )
       })}
     </div>

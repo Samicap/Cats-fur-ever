@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Cats.css";
 
-console.log(process.env);
+
 
 const axios = require("axios");
 
@@ -52,6 +52,32 @@ export default function Cats() {
     console.log("Cat Picture Id: ", catPictureId);
   }
 
+  function fetchUserFavoritePictures() {
+    let query = {
+      sub_id: "User-123",
+      limit: "10",
+      page: "1",
+    };
+
+    let headers = {
+      "x-api-key": "9b9e95d6-e743-4bc2-b090-b25f081c0a90",
+      "content-type": "application/json",
+    };
+
+    axios
+      .get("https://api.thecatapi.com/v1/favourites", query,
+        headers)
+      .then((response) => {
+        console.log(
+          "Response from axios call to fetch user favorites from api",
+          response
+        );
+      })
+      .catch((error) => {
+        console.log("Error fetching user's favorite cat pictures: ", error);
+      });
+  }
+
   return (
     <div className="random-cat-setup">
       <h2 className="cat-picture-title">
@@ -64,6 +90,7 @@ export default function Cats() {
         <button onClick={favoriteClick} className="favorite-button">
           Favorite
         </button>
+        <button onClick={fetchUserFavoritePictures}>Fetch Favorite Pics</button>
       </span>
       <img src={catPicture} className="cat-picture" alt="Cat" />
     </div>

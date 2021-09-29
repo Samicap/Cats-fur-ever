@@ -2,8 +2,26 @@
 
 To run the login the server must be started.  Inside cats-app run "node server.js"
 
+## Journal of Progress/Lessons Learned
+
 As of May 18, 2021, the login component is a learning tool for using tokens in a web app.  It is not
 a true authorized login.  The Login/token credentials can be seen using Dev tools in Chrome under Application in Session Storage.
+
+June 16: Major security issue with the API key being exposed.  Though it is located in the .env file and git ignored it is exposed in the browser developer tools.  Currently with the app is solely located in the frontend which means everything is exposed.  Solution:  Have it stored in a express backend so that it is not stored in the front end at all.  
+
+Websites about how to secure API keys:
+https://www.freecodecamp.org/news/how-to-securely-store-api-keys-4ff3ea19ebda/
+
+The file layout of the app is also confusing.  Make a mistake in the inital set up of the app by creating a git repo and then running create-react-app afterwards inside that repo.  Solution: Next time when setting up a project, do the inital setup outside of git and then push it all onto git from the command line.
+
+Of note:  Ran the update for VS Code last night.  Currently Prettier (code formatter) no longer works.  Keeping an eye out for an update.
+
+There is an error 400 if i try to favorite the same picture twice.  Need to account for this in the code later.
+
+Sept. 24, 2021:
+How to start the app when you've been away:
+navigate to cat-app and start it up using "npm start"
+in a new tab navigate to cat-app and run "node server.js" this starts the backend express server so the login can be fetched.
 
 ## Dependencies
 React bootstrap is used to build the Navigation bar.
@@ -41,7 +59,8 @@ https://medium.com/swlh/responsive-navbar-using-react-bootstrap-5e0e0bd33bd6
 -After copy and pasting in index.css added font-family to be able to use the font in the navbar.css file.
 https://blog.bam.tech/developer-news/add-a-custom-font-to-your-react-native-app
 
-
+## How to keep API keys secret
+https://www.freecodecamp.org/news/how-to-securely-store-api-keys-4ff3ea19ebda/
 
 ###############################################################
 
