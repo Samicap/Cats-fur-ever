@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import './CatBreedImage.css';
 
 export default function CatBreedImage (cat_id) {
   // const defaultUrl = "https://cdn2.thecatapi.com/images/8ciqdpaO5.jpg"
@@ -60,8 +61,7 @@ export default function CatBreedImage (cat_id) {
 
   return (
     <div>
-    <p>hi</p>
-    <img src={catPicture} className="cat-pic" alt="Cat"></img>
+      <img src={catPicture} className="cat-pic" alt="Cat"></img>
     </div>
   )
 }
