@@ -3,7 +3,6 @@ import axios from "axios";
 import './CatBreedImage.css';
 
 export default function CatBreedImage (cat_id) {
-  // const defaultUrl = "https://cdn2.thecatapi.com/images/8ciqdpaO5.jpg"
   const [ catPicture, setCatPicture] = useState("");
 
   let cat_breed_id = cat_id.cat_id;
@@ -47,7 +46,7 @@ export default function CatBreedImage (cat_id) {
     //     return ""
     //   });
     // }
-  }, []);
+  }, [cat_breed_id]);
 
   // let params = {
   //   params: {
