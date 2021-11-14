@@ -1,4 +1,5 @@
 .cat-pic {
   height: 30vh;
   width: 30vw;
+  object-fit: cover
 }
