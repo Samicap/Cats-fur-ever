@@ -23,7 +23,11 @@
   text-decoration: none;
 }
 
-.nav-links {
+.navbar-toggle {
+  float: right;
+}
+
+.me-auto {
   /* align-self: flex-end; */
   /* justify-self: flex-end; */
   /* justify-self: left; */
@@ -34,7 +38,7 @@
   float: right;
 }
 
-.nav-form-link {
+.nav-catBreedInfo-link {
   color: pink;
   text-decoration: none;
 }

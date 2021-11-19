@@ -7,7 +7,7 @@ import Login from "../Login/Login";
 import Navigation from "../Navbar/Navbar";
 import Preferences from "../Preferences/Preferences";
 import Cats from "../Cats/Cats";
-import Form from "../Form/Form";
+import CatBreedInfo from "../CatBreedInfo/CatBreedInfo";
 import useToken from "./useToken";
 
 function App() {
@@ -28,8 +28,8 @@ function App() {
           <Route path="/cats">
             <Cats />
           </Route>
-          <Route path="/form">
-            <Form />
+          <Route path="/catBreedInfo">
+            <CatBreedInfo />
           </Route>
           <Route exact path="/">
             <Dashboard />

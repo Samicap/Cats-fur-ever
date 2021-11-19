@@ -1,32 +1,38 @@
 import React from "react";
-import { Nav, Navbar, Container } from "react-bootstrap";
+import { Nav, Navbar, Container} from "react-bootstrap";
 import "./Navbar.css";
 
 export default function Navigation() {
   return (
-    <div>
-      <Navbar fixed="top" bg="dark" variant="dark" className="navbar">
-        <Navbar.Brand href="/" className="cat-logo">
-          <img alt="cat logo" src="images/cat.png" />
-          Cats-Fur-Ever!!!
-        </Navbar.Brand>
-        {/* <Container>
-          <Navbar.Toggle  />
-          <Navbar.Collapse id='responsive-navbar-nav'>
-           <Nav>
-            <Nav.Link href='/'>Home</Nav.Link>
-            <Nav.Link href='/form'>Form</Nav.Link>
-            <Nav.Link href='/cats'>Cats</Nav.Link>
-           </Nav>
+      <Navbar
+        collapseOnSelect
+        // fixed="top"
+        // the fixed position results in the conent being covered
+        bg="dark"
+        variant="dark"
+        expand="lg"
+        className="navbar"
+      >
+        <Container>
+          <Navbar.Brand href="/" className="cat-logo">
+            <img alt="cat logo" src="images/cat.png" />
+            Cats-Fur-Ever!!!
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggle" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="/catBreedInfo" className="nav-catBreedInfo-link">
+                Breed Info
+              </Nav.Link>
+              <Nav.Link href="/" className="nav-home-link">
+                Home
+              </Nav.Link>
+              <Nav.Link href="/cats" className="nav-random-cat-link">
+                Random Cat!
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
-        </Container> */}
-
-        <Nav className="nav-links">
-          <Nav.Link href="/form" className="nav-form-link"> Form</Nav.Link> {' '}
-          <Nav.Link href="/" className="nav-home-link"> Home</Nav.Link> {' '}
-          <Nav.Link href="/cats" className="nav-random-cat-link">Random Cat!</Nav.Link>
-        </Nav>
+        </Container>
       </Navbar>
-    </div>
   );
 }

@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
-import "./Form.css";
+import "./CatBreedInfo.css";
 import CatBreedImage from "../CatBreedImage/CatBreedImage";
 
 
-export default function Form() {
+export default function CatBreedInfo() {
   const [breed, setBreed] = useState("");
   // is useState automatically set to be an array?
   // const [apiData, setApiData] = useState([]) did NOT work.  the apiData.map in the render was not a function.
@@ -57,7 +57,7 @@ export default function Form() {
             <li>Name: {cat.name}</li>
             <li>Origin: {cat.origin} </li>
             <li>Weight: {cat.weight.metric} kgs</li>
-            <li>Life Span: {cat.life_span} </li>
+            <li>Life Span: {cat.life_span} years</li>
             <li>Temperament: {cat.temperament} </li>
             <li>Description: {cat.description} </li>
           </ul>
