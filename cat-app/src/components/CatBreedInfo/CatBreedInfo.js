@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
-import "./CatBreedInfo.css";
+// import "./CatBreedInfo.css";
+import "./CatBreedInfo.scss";
 import CatBreedImage from "../CatBreedImage/CatBreedImage";
 
 

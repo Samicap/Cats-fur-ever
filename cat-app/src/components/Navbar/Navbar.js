@@ -1,6 +1,7 @@
 import React from "react";
-import { Nav, Navbar, Container} from "react-bootstrap";
-import "./Navbar.css";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import "./Navbar.scss";
 
 export default function Navigation() {
   return (
@@ -8,19 +9,17 @@ export default function Navigation() {
         collapseOnSelect
         // fixed="top"
         // the fixed position results in the conent being covered
-        bg="dark"
-        variant="dark"
         expand="lg"
         className="navbar"
       >
-        <Container>
-          <Navbar.Brand href="/" className="cat-logo">
-            <img alt="cat logo" src="images/cat.png" />
+
+          <Navbar.Brand href="/" className="cat-logo" >
+            <img alt="cat logo" src="images/cat.png"/>
             Cats-Fur-Ever!!!
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="navbar-toggle" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto" >
               <Nav.Link href="/catBreedInfo" className="nav-catBreedInfo-link">
                 Breed Info
               </Nav.Link>
@@ -32,7 +31,7 @@ export default function Navigation() {
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
-        </Container>
+  
       </Navbar>
   );
 }
